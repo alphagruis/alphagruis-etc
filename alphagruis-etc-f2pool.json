@@ -1,0 +1,193 @@
+/*
+//
+// MARK: [ETC] f2pool
+// <https://f2pool.io/mining/guides/how-to-mine-ethereum-classic/>
+//
+// etc.f2pool.com
+//
+// REPLACE %WORKER% with your rig name,
+// REPLACE ALL %WALLET_USERNAME% with your f2pool's username,
+// alternatively, create and use environment variables.
+//
+// Sort the connections by prioritizing the servers closest to you.
+//
+*/
+
+{
+    // [optional]
+    "fLogFile": 1,
+
+    // [optional]
+    "fColors": 1,
+
+    // [required]
+    "fWorker": "%WORKER%",
+
+    // [required]
+    "fStratumAddressArray":
+    [
+        //
+        // [ETC] f2pool, nonSSL: 8118
+        //
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required] f2pool's username.
+            "fWallet": "%WALLET_USERNAME%",
+
+            // [optional]
+            "fPassword": "x",
+
+            // [required]
+            "fSocketAddressName": "etc.f2pool.com",
+
+            // [required]
+            "fServerPort": 8118,
+
+            // [optional]
+            "fSSL": 0
+        }
+    ],
+
+    // [optional]
+    "fMinerSettingsArray":
+    [
+        //
+        // AMD
+        //
+
+        {
+            // [required] OpenCL: 1
+            "fPlatformType": 1,
+
+            // [required] AMD: 1
+            "fDeviceType": 1,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in RELATIVE value.
+                "fPowerLimit": 0,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockGraphics": [1600, 900],
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockMemory": [2150, 900],
+
+                // [optional] unit: natural, AMD only.
+                "fMemoryTimingLevel": 2,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 8
+                "fEthashThreadsPerHash": 8
+            }
+        },
+
+        //
+        // NVIDIA
+        //
+
+        {
+            // [required] CUDA: 32
+            "fPlatformType": 32,
+
+            // [required] NVIDIA: 4
+            "fDeviceType": 4,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fPowerLimit": 50,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockGraphics": 0,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockMemory": 800,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fComputeDatasetKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fEthashSearchKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 4
+                "fEthashThreadsPerHash": 4,
+
+                // [optional] default: 0
+                "fMaximumAmountOfRegisters": 0
+            }
+        }
+    ]
+}

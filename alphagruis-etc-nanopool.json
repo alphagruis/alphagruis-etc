@@ -1,0 +1,319 @@
+/*
+//
+// MARK: [ETC] nanopool
+// <https://help.nanopool.org/article/49-pool-information>
+//
+// etc-eu1.nanopool.org
+// etc-eu2.nanopool.org
+// etc-us-east1.nanopool.org
+// etc-us-west1.nanopool.org
+// etc-asia1.nanopool.org
+// etc-jp1.nanopool.org
+// etc-au1.nanopool.org
+//
+// REPLACE %WORKER% with your rig name,
+// REPLACE ALL %WALLET_ETC% with your ETC wallet address,
+// alternatively, create and use environment variables.
+//
+// Sort the connections by prioritizing the servers closest to you.
+//
+*/
+
+{
+    // [optional]
+    "fLogFile": 1,
+
+    // [optional]
+    "fColors": 1,
+
+    // [required]
+    "fWorker": "%WORKER%",
+
+    // [required]
+    "fStratumAddressArray":
+    [
+        //
+        // [ETC] nanopool, nonSSL: 19999, SSL: 19433 (recommended)
+        //
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-eu1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-eu2.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-us-east1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-us-west1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-asia1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-jp1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        },
+
+        {
+            // [required]
+            "fStratumMode": 0,
+
+            // [required]
+            "fWallet": "%WALLET_ETC%",
+
+            // [optional]
+            "fPassword": "",
+
+            // [required]
+            "fSocketAddressName": "etc-au1.nanopool.org",
+
+            // [required]
+            "fServerPort": 19433,
+
+            // [optional]
+            "fSSL": 1
+        }
+    ],
+
+    // [optional]
+    "fMinerSettingsArray":
+    [
+        //
+        // AMD
+        //
+
+        {
+            // [required] OpenCL: 1
+            "fPlatformType": 1,
+
+            // [required] AMD: 1
+            "fDeviceType": 1,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in RELATIVE value.
+                "fPowerLimit": 0,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockGraphics": [1600, 900],
+
+                // [optional] unit: [MHz, mV] or MHz, expressed in ABSOLUTE value.
+                "fClockMemory": [2150, 900],
+
+                // [optional] unit: natural, AMD only.
+                "fMemoryTimingLevel": 2,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 8
+                "fEthashThreadsPerHash": 8
+            }
+        },
+
+        //
+        // NVIDIA
+        //
+
+        {
+            // [required] CUDA: 32
+            "fPlatformType": 32,
+
+            // [required] NVIDIA: 4
+            "fDeviceType": 4,
+
+            //
+            // Uncomment this block (removing /* */) always and only after setting the parameters correctly.
+            //
+            
+        /*
+            // [optional]
+            "fDeviceOverclockSettings":
+            {
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fPowerLimit": 50,
+
+                // [optional] unit: celsius, expressed in ABSOLUTE value.
+                "fTemperatureLimit": 70,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockGraphics": 0,
+
+                // [optional] unit: MHz, expressed in RELATIVE value.
+                "fClockMemory": 800,
+
+                // [optional] unit: percentage, expressed in ABSOLUTE value.
+                "fFanSpeed": 75
+            },
+        */
+        
+            // [optional]
+            "fKernelSettings":
+            {
+                // [optional] default: 2
+                "fComputeDatasetChannels": 2,
+
+                // [optional] default: 128
+                "fComputeDatasetKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fComputeDatasetKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 262144
+                "fComputeDatasetKernelGlobalWorkStep": 262144,
+
+                // [optional] default: 2
+                "fSearchChannels": 2,
+
+                // [optional] default: 128
+                "fEthashSearchKernelLocalWorkSize": 128,
+
+                // [optional] default: 0, CUDA only.
+                "fEthashSearchKernelMinBlocksPerMultiprocessor": 0,
+
+                // [optional] default: 1048576
+                "fEthashSearchKernelGlobalWorkSize": 1048576,
+
+                // [optional] default: 4
+                "fEthashThreadsPerHash": 4,
+
+                // [optional] default: 0
+                "fMaximumAmountOfRegisters": 0
+            }
+        }
+    ]
+}

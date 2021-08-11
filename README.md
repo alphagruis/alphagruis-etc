@@ -39,7 +39,7 @@ Try it, we are sure you will never want to go back.
 
 ## Mining Transparency
 
-**alphagruis**'s Miner for **Ethereum Classic** is completely transparent (the binary (executable machine code) is not packed). The hashrate reported by the miner is not inflated and will match, on average, to the effective hashrate calculated by the pool. Without any tricks. Everything the miner does is displayed on the console and written to the log file. Nothing is left out.
+**alphagruis**'s Miner for **Ethereum Classic** is completely transparent (the binary (executable machine code) is signed and not packed). The hashrate reported by the miner is not inflated and will match, on average, to the effective hashrate calculated by the pool. Without any tricks. Everything the miner does is displayed on the console and written to the log file. Nothing is left out.
 
 **alphagruis** encourages everyone to scan all files contained in this repository with their favorite antivirus.
 

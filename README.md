@@ -5,7 +5,7 @@
 
 # :small_orange_diamond: alphagruis's Miner for Ethereum Classic
 
-**alphagruis**'s Miner for **Ethereum Classic**, is a high performance and rock solid miner. This miner was designed and implemented in C++, OpenCL and CUDA **from scratch** by the **alphagruis** team, a small group of skilled developers, for a huge cryptocurrency mining farm. Now, **alphagruis** can finally publish its wonderful miner. Official binaries are currently only available for the **Windows** platform.
+**alphagruis**'s Miner for **Ethereum Classic**, is a high performance and rock solid miner. This miner was designed and implemented in C++, OpenCL and CUDA **from scratch** by the **alphagruis** team, a small group of skilled developers. Official binaries are currently only available for the **Windows** platform.
 
 Try it, we are sure you will never want to go back.
 

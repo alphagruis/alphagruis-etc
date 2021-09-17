@@ -9,6 +9,6 @@
 
 # End User License Agreement
 
-**alphagruis**'s Miner for **Ethereum Classic** uses **NVIDIA Runtime Compilation Library** (NVRTC) that is property of **NVIDIA Corporation** and redistributed according to the **CUDA Toolkit Supplement to Software License Agreement for NVIDIA Software Development Kits**.
+**alphagruis**'s Miner for **Ethereum Classic** uses **NVIDIA Runtime Compilation Library** (NVRTC) owned by **NVIDIA Corporation** and redistributed according to the **CUDA Toolkit Supplement to Software License Agreement for NVIDIA Software Development Kits**.
 
 https://docs.nvidia.com/cuda/eula/index.html#cuda-toolkit-supplement-license-agreement

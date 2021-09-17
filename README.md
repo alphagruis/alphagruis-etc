@@ -53,7 +53,7 @@ To configure the miner, you can easily edit the default **alphagruis-etc.json** 
 
 *All JSON field values can be filled with environment variables.*
 
-ex. alphagruis.json file in JSON format to mine with the *ethermine* pool:
+ex. alphagruis-etc.json file in JSON format to mine with the *ethermine* pool:
 
 <details>
 <summary>JSON Object</summary>
